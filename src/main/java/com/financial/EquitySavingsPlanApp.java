@@ -18,7 +18,7 @@ public class EquitySavingsPlanApp extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("application"));
         scene.getStylesheets().add(EquitySavingsPlanApp.class.getResource("styles.css").toExternalForm());
-        stage.setTitle("PieChartApp");
+        stage.setTitle("IPPEA JavaFX");
         stage.setScene(scene);
         stage.getIcons().add(new Image(EquitySavingsPlanApp.class.getResourceAsStream("/icon.png")));
         stage.show();

@@ -28,7 +28,7 @@ import java.io.File;
 import java.util.*;
 import java.util.function.Function;
 
-public class PieChartController {
+public class ApplicationController {
 
 
     @FXML
