@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.web.*?>
+<?import com.financial.ViewTab?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import com.financial.control.ImportFileCellFactory?>
+<?import com.financial.control.OpenLinkCellFactory?>
+<?import com.financial.control.MoneyCellFactory?>
+<?import com.financial.control.CustomTableView?>
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="com.financial.PieChartController"
+         fx:id="tabPane"
+         prefHeight="400.0" prefWidth="600.0"
+            styleClass="toto">
+
+    <ViewTab fx:id="equitySavingsPlan" color="pink" text="Plan d'épargne en actions" closable="false"/>
+    <ViewTab fx:id="lazyInvesting"  type="lazy" text="Investissement passif" closable="false">
+            <children>
+                <CustomTableView fx:id="stockPurchase">
+                    <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                    <columns>
+                        <TableColumn text="ISIN" prefWidth="120" maxWidth="120" minWidth="120">
+                            <cellValueFactory><PropertyValueFactory property="isin" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Mnémo" styleClass="link" prefWidth="100" maxWidth="100" minWidth="100">
+                            <cellValueFactory><PropertyValueFactory property="ticker" /></cellValueFactory>
+                            <cellFactory><OpenLinkCellFactory fx:constant="INSTANCE" /></cellFactory>
+                        </TableColumn>
+                        <TableColumn text="Émetteur" prefWidth="200" maxWidth="200" minWidth="200">
+                            <cellValueFactory><PropertyValueFactory property="issuer" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Indice">
+                            <cellValueFactory><PropertyValueFactory property="index" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Valeur">
+                            <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Quantitié" styleClass="number" prefWidth="100" maxWidth="100" minWidth="100">
+                            <cellValueFactory><PropertyValueFactory property="quantity" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Montant" styleClass="number" prefWidth="100" maxWidth="100" minWidth="100">
+                            <cellValueFactory><PropertyValueFactory property="amount" /></cellValueFactory>
+                            <cellFactory><MoneyCellFactory fx:constant="INSTANCE" /></cellFactory>
+                        </TableColumn>
+                    </columns>
+                </CustomTableView>
+            </children>
+    </ViewTab>
+    <ViewTab fx:id="valueInvesting" type="value" color="blue" text="Investissement valeur" closable="false"/>
+    <Tab text="Import" styleClass="import" closable="false">
+        <VBox alignment="TOP_CENTER" spacing="5.0" fillWidth="true">
+            <children>
+                <Button fx:id="addButton" text="Importer un fichier csv" onAction="#addElement"/>
+                <CustomTableView fx:id="imports">
+                    <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                    <columns>
+                        <TableColumn text="Date">
+                            <cellValueFactory><PropertyValueFactory property="date" /></cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="importFile" text="Fichier" styleClass="link">
+                            <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+                            <cellFactory><ImportFileCellFactory fx:constant="INSTANCE" /></cellFactory>
+                        </TableColumn>
+                        <TableColumn text="Dossier">
+                            <cellValueFactory><PropertyValueFactory property="folder" /></cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </CustomTableView>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+        </VBox>
+    </Tab>
+    <Tab fx:id="browserTab" text="Navigateur" closable="false">
+        <WebView fx:id="browser" />
+    </Tab>
+</TabPane>

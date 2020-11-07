@@ -1,0 +1,202 @@
+.table-cell.number{
+-fx-alignment: CENTER-RIGHT;
+}
+
+
+
+
+.table-view .scroll-bar:horizontal,.table-view .scroll-bar:vertical {
+       -fx-opacity: 0;
+       -fx-padding:-7;
+}
+
+/* violet */
+.default-color0.chart-pie { -fx-pie-color: #E0AAFF; }
+.default-color1.chart-pie { -fx-pie-color: #C77DFF; }
+.default-color2.chart-pie { -fx-pie-color: #9D4EDD; }
+.default-color3.chart-pie { -fx-pie-color: #7B2CBF; }
+.default-color4.chart-pie { -fx-pie-color: #5A189A; }
+.default-color5.chart-pie { -fx-pie-color: #3C096C; }
+.default-color6.chart-pie { -fx-pie-color: #240046; }
+.default-color7.chart-pie { -fx-pie-color: #10002B; }
+
+
+.chart-title{
+-fx-font-size: 2em;
+-fx-text-fill: #5A189A;
+}
+
+.tooltip {
+    -fx-font-size: 1.05em;
+    -fx-text-fill: #10002B;
+    -fx-background-color: #F8EEFF;
+}
+/*
+.viewtab{
+-fx-background-color:  white;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: white;
+}
+.tab-pane .tab-content-area {
+ -fx-background-color: white;
+}
+.tab-pane, .tab {
+-fx-background-color: white;
+}
+.toto{
+-fx-background-color: white;
+}
+*/
+.donut-background{
+-fx-fill: white;
+}
+
+
+.tab{
+ -fx-background-color: #5A189A;
+}
+.tab-label {
+    -fx-text-fill:  #F8EEFF;;
+}
+
+
+.table-view .cell{
+-fx-border-width: 0 1 0 0;
+  -fx-border-color: #F8EEFF;
+
+}
+.table-row-cell:odd{
+    -fx-background-color: #F8EEFF;
+}
+.table-view .column-header-background{
+ -fx-background-color: #5A189A;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .column-header .label{
+-fx-text-fill: #F8EEFF;
+}
+
+/* blue */
+.blue  .default-color0.chart-pie { -fx-pie-color: #90E0EF; }
+.blue  .default-color1.chart-pie { -fx-pie-color: #48CAE4; }
+.blue  .default-color2.chart-pie { -fx-pie-color: #0B4D8F; }
+.blue  .default-color3.chart-pie { -fx-pie-color: #0096C7; }
+.blue  .default-color4.chart-pie { -fx-pie-color: #0077B6; }
+.blue  .default-color5.chart-pie { -fx-pie-color: #023E8A; }
+.blue  .default-color6.chart-pie { -fx-pie-color: #03045E; }
+.blue  .default-color7.chart-pie { -fx-pie-color: #ADE8F4; }
+
+.blue  .chart-title{
+-fx-text-fill: #0096C7;
+}
+
+.blue  .tooltip {
+    -fx-font-size: 1.05em;
+    -fx-text-fill: #10002B;
+    -fx-background-color: #F0FBFD;
+}
+
+
+.blue.tab{
+ -fx-background-color: #0096C7;
+}
+.blue.tab-label {
+ -fx-text-fill:  #F0FBFD;
+}
+
+
+.blue  .table-view .cell{
+-fx-border-width: 0 1 0 0;
+  -fx-border-color: #F0FBFD;
+
+}
+.blue  .table-row-cell:odd{
+    -fx-background-color: #F0FBFD;
+}
+.blue  .table-view .column-header-background{
+ -fx-background-color: #0096C7;
+}
+.blue  .table-view .column-header {
+    -fx-background-color: transparent;
+}
+.blue  .table-view .column-header .label{
+-fx-text-fill: #F0FBFD;
+}
+
+
+
+/* pink */
+.pink  .default-color0.chart-pie { -fx-pie-color: #FFC2D4; }
+.pink  .default-color1.chart-pie { -fx-pie-color: #FF9EBB; }
+.pink  .default-color2.chart-pie { -fx-pie-color: #FF7AA2; }
+.pink  .default-color3.chart-pie { -fx-pie-color: #E05780; }
+.pink  .default-color4.chart-pie { -fx-pie-color: #B9375E; }
+.pink  .default-color5.chart-pie { -fx-pie-color: #8A2846; }
+.pink  .default-color6.chart-pie { -fx-pie-color: #602437; }
+.pink  .default-color7.chart-pie { -fx-pie-color: #522E38; }
+
+.pink  .chart-title{
+-fx-text-fill: #8A2846;
+}
+
+.pink  .tooltip {
+    -fx-font-size: 1.05em;
+    -fx-text-fill: #10002B;
+    -fx-background-color: #FFE0E9;
+}
+
+
+.pink.tab{
+ -fx-background-color: #8A2846;
+}
+.pink.tab-label {
+ -fx-text-fill:  #FFE0E9;
+}
+
+
+.pink  .table-view .cell{
+-fx-border-width: 0 1 0 0;
+  -fx-border-color: #FFE0E9;
+
+}
+.pink  .table-row-cell:odd{
+    -fx-background-color: #FFE0E9;
+}
+.pink  .table-view .column-header-background{
+ -fx-background-color: #8A2846;
+}
+.pink  .table-view .column-header {
+    -fx-background-color: transparent;
+}
+.pink  .table-view .column-header .label{
+-fx-text-fill: #FFE0E9;
+}
+
+/* black */
+.import.tab{
+ -fx-background-color: #0A6497;
+}
+.import.tab-label {
+ -fx-text-fill:  #FFFFFF;
+}
+.link{
+    -fx-underline: true;
+}
+.link:hover{
+-fx-cursor: hand;
+-fx-text-fill: blue;
+}
+
+/* désactiver selection tableau */
+.table-row-cell:filled:selected {
+  -fx-background: -fx-control-inner-background ;
+  -fx-background-color: -fx-table-cell-border-color, -fx-background ;
+  -fx-background-insets: 0, 0 0 1 0 ;
+  -fx-table-cell-border-color: derive(-fx-color, 5%);
+}
+.table-row-cell:odd:filled:selected {
+  -fx-background: -fx-control-inner-background-alt ;
+}
